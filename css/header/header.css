@@ -9,8 +9,6 @@
   z-index: 20;
   /* cobre a safe-area do status bar (PWA / notch) e elimina a faixa */
   overflow: visible;
-  /* transform: translateZ(0); */
-  /* -webkit-transform: translateZ(0); */
 }
 
 /* ---- CONTAINER DO HEADER ---- */
@@ -32,6 +30,10 @@
   height: 37px;
   width: auto;
   display: block;
+  backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+transform: translateZ(0);
+-webkit-transform: translateZ(0);
 }
 
 /* ---- AÇÕES DO MENU (links + botão tema) ---- */
@@ -341,6 +343,4 @@
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
  }
-
 }
-
