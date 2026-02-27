@@ -167,7 +167,7 @@ transform: translateZ(0);
     padding: 2rem 1rem;
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
     transition: opacity .3s ease, transform .3s ease;
     border-bottom: none;
   }
