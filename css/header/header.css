@@ -142,20 +142,23 @@
 
 /* ========================= MOBILE ========================= */
 @media (max-width: 768px) {
-/*------------largura header mobile-----------*/
-.nav{
-  height: 44px;
-}
-/*------------largura header mobile-----------*/
-  .hamburger {
-    display: flex;
+
+  .nav{
+    height: 44px;
+    position: relative; /* 🔑 */
   }
 
-  .nav-list {
+  .hamburger{
+    display:flex;
+  }
+
+  .nav-list{
     position: absolute;
-    top: 72px;
+    top: 100%;      /* ✅ cola no final do header */
+    left: 0;        /* ✅ garante largura certinha */
     right: 0;
     width: 100%;
+
     background: var(--rose);
     flex-direction: column;
     gap: 1.8rem;
@@ -163,20 +166,17 @@
     opacity: 0;
     pointer-events: none;
     transform: translateY(-20px);
-    transition: 0.3s ease;
-    /*border-bottom: 1px solid var(--border);*/
+    transition: opacity .3s ease, transform .3s ease;
     border-bottom: none;
   }
 
-  .nav-list.active {
+  .nav-list.active{
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
     border-bottom: 1px solid var(--border);
   }
 }
-
-
 
 
 /* =========================================================
@@ -343,3 +343,4 @@
  }
 
 }
+
